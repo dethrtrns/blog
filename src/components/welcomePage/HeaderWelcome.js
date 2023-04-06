@@ -50,11 +50,15 @@ export default function HeaderWelcome() {
     setChecked(true);
   }, []);
   return (
-    <div className={classes.root} id='header'>
-      <AppBar className={classes.appbar} elevation={0}>
+    <div
+      className={classes.root}
+      id='header'>
+      <AppBar
+        className={classes.appbar}
+        elevation={0}>
         <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>
-            <Link href={"/posts"}>
+            <Link href={"/"}>
               The<span className={classes.colorText}>Zone.</span>
             </Link>
           </h1>
@@ -69,14 +73,15 @@ export default function HeaderWelcome() {
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
-        collapsedHeight={50}
-      >
+        collapsedHeight={50}>
         <div className={classes.container}>
           <h1 className={classes.title}>
             Welcome to <br />
             The<span className={classes.colorText}>Zone.</span>
           </h1>
-          <Scroll to='place-to-visit' smooth={true}>
+          <Scroll
+            to='place-to-visit'
+            smooth={true}>
             <IconButton>
               <ExpandMoreIcon className={classes.goDown} />
             </IconButton>
